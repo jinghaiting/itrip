@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/itripdb?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+# ---------redis配置在了外部配置文件database.properties了，这里就不用配置了-----------------
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    database: 0
+#    jedis:
+#      pool:
+#        max-wait: 8
+#        max-active: 8
+#        max-idle: 8
+#        min-idle: 1
+#    timeout: 10000
+
+
+mybatis:
+  mapper-locations: classpath:cn/itrip/dao/**/*.xml
+  type-aliases-package: cn.trip.beans
